@@ -1,0 +1,23 @@
+{
+    "name": "demo/framework-app",
+    "description": "Demo application for Market Framework",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../"
+        }
+    ],
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public",
+        "migrate": "php migrate.php"
+    }
+}

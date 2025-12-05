@@ -1,0 +1,44 @@
+{
+    "name": "market-framework/core",
+    "description": "A lightweight PHP MVC framework based on the market-online architecture",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Framework\\Core\\": "Core/",
+            "Framework\\Routing\\": "Routing/",
+            "Framework\\Exceptions\\": "Exceptions/",
+            "Framework\\Middleware\\": "Middleware/",
+            "Framework\\Validation\\": "Validation/",
+            "Framework\\Auth\\": "Auth/",
+            "Framework\\Database\\": "Database/",
+            "Framework\\Config\\": "Config/",
+            "Framework\\Helpers\\": "Helpers/",
+            "Framework\\Logging\\": "Logging/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Stéphane"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "App\\": "demo/app/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit",
+        "seed": "php demo/seed.php"
+    }
+}
